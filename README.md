@@ -1,3 +1,20 @@
+# Don't Fear The Repo #
+
+* [MKS Git workflow (Contributing.md)](https://github.com/dont-fear-the-repo/dont-fear-the-repo/blob/master/CONTRIBUTING.md)
+* [MKS Waffle.io board for gitissues](https://waffle.io/dont-fear-the-repo/dont-fear-the-repo)
+  * Please add what you're working on
+  * Title it in the style of the commits, `<type>(<scope>): <subject>` 
+    * for example `[fix](deploy): Edit package.json for heroku deploy`
+  * Add labels that apply
+* Google docs:
+  * [User Experience](https://docs.google.com/document/d/14RDEGpsJsEkOgTtGHLJrjvb10u0nh4CDXpbxbuaVh2M/edit)
+  * [Database/architecture](https://docs.google.com/document/d/1iHBleCRqJHEEkgui5CCL8jjCec6oTuwz0xUtFge3WMI/edit)
+  * [Project Proposals and Diagrams](https://docs.google.com/document/d/15q0Lt2Fy0VXXR9gEYoBde-bjTDFyMLDdEvdFN5KIZGc/edit)
+  * [TechNotes whiteboard](https://docs.google.com/document/d/1Xreu_c-Kg74K1OoVIxiu6yM1Bn9thl4ATuJUw9Ax1NM/edit)
+  * [Brainstorming spreadsheet](https://docs.google.com/spreadsheets/d/1EsvvYa5koF6s6rNv4dpVaGud9n5Btmbdy0IsEN_wMh8/edit#gid=0)
+  * [Brainstorming doc](https://docs.google.com/document/d/1M-FmnJfM4x67Epuljv-4uOUwvYMqrGwskUop3BWUJ_g)
+
+
 # React Redux Universal Hot Example
 
 [![build status](https://img.shields.io/travis/erikras/react-redux-universal-hot-example/master.svg?style=flat-square)](https://travis-ci.org/erikras/react-redux-universal-hot-example)

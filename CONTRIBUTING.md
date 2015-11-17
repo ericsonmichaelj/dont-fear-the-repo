@@ -61,6 +61,6 @@ The scope could be anything specifying place of the commit change. For example `
 
 The subject contains succinct description of the change:
 
-* use the present tense: "Update" not "Update" nor "Updates"
+* use the present tense: "Update" not "Updated" nor "Updates"
 * capitalize first letter
 * no dot (.) at the end

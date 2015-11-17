@@ -102,8 +102,7 @@ export default class Home extends Component {
             <dd>
               The <code>App.js</code> that wraps all the pages contains an <code>InfoBar</code> component
               that fetches data from the server initially, but allows for the user to refresh the data from
-              the client. <code>About.js</code> contains a <code>MiniInfoBar</code> that displays the same
-              data.
+              the client.
             </dd>
             <dt>Server-side data loading</dt>
             <dd>

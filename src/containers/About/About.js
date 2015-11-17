@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import DocumentMeta from 'react-document-meta';
-import { MiniInfoBar } from 'components';
 
 export default class About extends Component {
   state = {
@@ -25,13 +24,6 @@ export default class About extends Component {
             href="https://github.com/erikras/react-redux-universal-hot-example/graphs/contributors"
             target="_blank">all the contributors</a>.
         </p>
-
-        <h3>Mini Bar <span style={{color: '#aaa'}}>(not that kind)</span></h3>
-
-        <p>Hey! You found the mini info bar! The following component is display-only. Note that it shows the same
-          time as the info bar.</p>
-
-        <MiniInfoBar/>
 
         <h3>Images</h3>
 

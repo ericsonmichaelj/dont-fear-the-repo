@@ -24,11 +24,14 @@ import getStatusFromRoutes from './helpers/getStatusFromRoutes';
 const pretty = new PrettyError();
 const app = new Express();
 const server = new http.Server(app);
+// Creates a new proxy server, which we can use with 'proxy.web()' to proxy requests to the API server.
+// The 'ws' option configures this for use with websocket requests.
 const proxy = httpProxy.createProxyServer({
   target: 'http://' + config.apiHost + ':' + config.apiPort,
   ws: true
 });
 
+// This is compression middleware, using gzip.
 app.use(compression());
 app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
 

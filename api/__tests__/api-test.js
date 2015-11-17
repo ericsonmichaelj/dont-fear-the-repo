@@ -31,7 +31,7 @@ describe('mapUrl', () => {
       params: []
     });
   });
-  it('extracts the available actions and the params from an relative url string with GET params', () => {
+  it('extracts the available actions and the params from a relative url string with GET params', () => {
 
     const url = '/widget/load/param1/xzy?foo=bar';
     const splittedUrlPath = url.split('?')[0].split('/').slice(1);
@@ -43,7 +43,7 @@ describe('mapUrl', () => {
     });
   });
 
-  it('extracts the available actions from an url string without GET params', () => {
+  it('extracts the available actions from a url string without GET params', () => {
     const url = '/widget/load/?foo=bar';
     const splittedUrlPath = url.split('?')[0].split('/').slice(1);
     const availableActions = {a: 1, widget: {c: 1, load: () => 'baz'}};

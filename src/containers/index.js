@@ -1,7 +1,8 @@
 export App from './App/App';
 export Chat from './Chat/Chat';
 export Home from './Home/Home';
-export Widgets from './Widgets/Widgets';
+// TODO: make this live when our code works
+// export Resumes from './Resumes/Resumes';
 export About from './About/About';
 export Login from './Login/Login';
 export LoginSuccess from './LoginSuccess/LoginSuccess';

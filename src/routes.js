@@ -5,7 +5,8 @@ import {
     App,
     Chat,
     Home,
-    Widgets,
+    // TODO: make live when resume code works
+    // Resumes,
     About,
     Login,
     LoginSuccess,
@@ -49,7 +50,6 @@ export default (store) => {
       <Route path="about" component={About}/>
       <Route path="login" component={Login}/>
       <Route path="survey" component={Survey}/>
-      <Route path="widgets" component={Widgets}/>
 
       { /* Catch all route */ }
       <Route path="*" component={NotFound} status={404} />

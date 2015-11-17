@@ -7,6 +7,7 @@ Some basic conventions for contributing to this project.
 * Fork Repo
 * Clone repo from your repo
 * Make changes in new branch
+* Please follow airbnb style guide : https://github.com/airbnb/javascript
 
 Note : Only make pull requests to the dev branch.
 

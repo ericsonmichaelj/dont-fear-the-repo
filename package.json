@@ -1,14 +1,18 @@
 {
-  "name": "react-redux-universal-hot-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux and hot reloading",
-  "author": "Erik Rasmussen <rasmussenerik@gmail.com> (http://github.com/erikras)",
+  "name": "Carly-Rae-JSON",
+  "description": "Drag-and-drop resume building",
+  "author": ["Aaron Huang <andrew.huang12@gmail.com> (http://github.com/AndrewTHuang)",
+             "Melody Lu <melodylu@gmail.com> (http://github.com/melodylu)",
+             "Michael Ericson <ericson.michael.j@gmail.com> (http://github.com/ericsonmichaelj)",
+             "Ryan James <ryanwilsonjames@gmail.com> (http://github.com/dangerismycat)",
+             "Sujay Patel <sujay.sanjay.patel@gmail.com> (http://github.com/sujaypatel16)"],
   "license": "MIT",
   "version": "0.9.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/erikras/react-redux-universal-hot-example"
+    "url": "https://github.com/dont-fear-the-repo/dont-fear-the-repo"
   },
-  "homepage": "https://github.com/erikras/react-redux-universal-hot-example",
+  "homepage": "https://github.com/dont-fear-the-repo/dont-fear-the-repo",
   "keywords": [
     "react",
     "isomorphic",
@@ -18,8 +22,6 @@
     "hot reloading",
     "react-hot-reloader",
     "redux",
-    "starter",
-    "boilerplate",
     "babel"
   ],
   "main": "bin/server.js",

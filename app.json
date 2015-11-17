@@ -1,7 +1,7 @@
 {
-  "name": "react-redux-universal-hot-example",
-  "description": "Example of an isomorphic (universal) webapp using react redux and hot reloading",
-  "repository": "https://github.com/erikras/react-redux-universal-hot-example",
+  "name": "Carly-Rae-JSON",
+  "description": "Drag-and-drop resume building",
+  "repository": "https://github.com/dont-fear-the-repo/dont-fear-the-repo",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": [
     "react",
@@ -12,8 +12,6 @@
     "hot reloading",
     "react-hot-reloader",
     "redux",
-    "starter",
-    "boilerplate",
     "babel"
   ]
 }

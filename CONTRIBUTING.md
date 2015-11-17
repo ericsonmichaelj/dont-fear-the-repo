@@ -7,7 +7,7 @@ Some basic conventions for contributing to this project.
 * Fork Repo
 * Clone repo from your repo
 * Make changes in new branch
-* Please follow airbnb style guide : https://github.com/airbnb/javascript
+* Please follow Airbnb style guide : https://github.com/airbnb/javascript
 
 Note : Only make pull requests to the dev branch.
 
@@ -17,13 +17,13 @@ Please check your code using `npm run lint` before submitting your pull requests
 
 ### Branches
 
-* dev : utilize this code to update, create, test code on local host
-* test : utilize to migrate code to host server to qa server
-* master : utilize to migrage production ready code to production server
+* dev : utilize branch to update, create, and test code on local host
+* test : migrate code from dev branch to qa server
+* master : migrate code from test branch to production server
 
 ### Commit Message Format
 
-Each commit message should include a **type**, a **scope** and a **subject**:
+Each commit message should include a **type**, a **verb** and a **description**:
 
 ```
 [type]: <Capitalize present tense verb> add description
@@ -61,6 +61,6 @@ The scope could be anything specifying place of the commit change. For example `
 
 The subject contains succinct description of the change:
 
-* use the present tense: "update" not "update" nor "updates"
+* use the present tense: "Update" not "Update" nor "Updates"
 * capitalize first letter
 * no dot (.) at the end

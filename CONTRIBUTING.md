@@ -4,32 +4,38 @@ Some basic conventions for contributing to this project.
 
 ### General
 
-Please make sure that there aren't existing pull requests attempting to address the issue mentioned. Likewise, please check for issues related to update, as someone else may be working on the issue in a branch or fork.
+* Fork Repo
+* Clone repo from your repo
+* Make changes in new branch
 
-* Non-trivial changes should be discussed in an issue first
-* Develop in a topic branch, not master
-* Squash your commits
+Note : Only make pull requests to the dev branch.
 
 ### Linting
 
 Please check your code using `npm run lint` before submitting your pull requests, as the CI build will fail if `eslint` fails.
+
+### Branches
+
+* dev : utilize this code to update, create, test code on local host
+* test : utilize to migrate code to host server to qa server
+* master : utilize to migrage production ready code to production server
 
 ### Commit Message Format
 
 Each commit message should include a **type**, a **scope** and a **subject**:
 
 ```
- <type>(<scope>): <subject>
+[type]: <Capitalize present tense verb> add description
+Note: Do not add ending puncutation.
 ```
 
-Lines should not exceed 100 characters. This allows the message to be easier to read on github as well as in various git tools and produces a nice, neat commit log ie:
+Lines should not exceed 100 characters.
 
 ```
- #459  refactor(utils): create url mapper utility function
- #463  chore(webpack): update to isomorphic tools v2
- #494  fix(babel): correct dependencies and polyfills
- #510  feat(app): add react-bootstrap responsive navbar
-``` 
+  [refactor]: Create url mapper utility function
+  [fix]: Update routes for login
+  [docs]: Add information for commiting styles to contributing guide
+```
 
 #### Type
 
@@ -54,6 +60,6 @@ The scope could be anything specifying place of the commit change. For example `
 
 The subject contains succinct description of the change:
 
-* use the imperative, present tense: "change" not "changed" nor "changes"
-* don't capitalize first letter
+* use the present tense: "update" not "update" nor "updates"
+* capitalize first letter
 * no dot (.) at the end

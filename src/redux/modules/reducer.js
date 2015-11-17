@@ -6,7 +6,8 @@ import auth from './auth';
 import counter from './counter';
 import {reducer as form} from 'redux-form';
 import info from './info';
-import widgets from './widgets';
+// TODO: make live when resume code is working
+// import resumes from './resumes';
 
 export default combineReducers({
   router: routerStateReducer,
@@ -17,6 +18,7 @@ export default combineReducers({
     counter2: counter,
     counter3: counter
   }),
-  info,
-  widgets
+  info
+  // TODO: make live when resume code is working
+  // resumes
 });

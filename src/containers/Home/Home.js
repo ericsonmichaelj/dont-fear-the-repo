@@ -131,10 +131,6 @@ export default class Home extends Component {
               manage form state inside the Redux store. This includes immediate client-side validation.
             </dd>
             <dt>WebSockets / socket.io</dt>
-            <dd>
-              The <Link to="/chat">Chat</Link> uses the socket.io technology for real-time
-              commnunication between clients. You need to <Link to="/login">login</Link> first.
-            </dd>
           </dl>
 
           <h3>From the author</h3>

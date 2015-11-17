@@ -19,10 +19,19 @@ function formatUrl(path) {
  *
  * Remove it at your own risk.
  */
+
+/* This is the `ApiClient`, a facade that both server and client code use to talk to the
+ * API server. On the server side, `ApiClient` is given the request object so that it can pass along
+ * the session cookie to the API server to maintain session state. We pass this API client facade to
+ * the `redux` middleware so that the action creators have access to it.
+*/
+
 class _ApiClient {
   constructor(req) {
     methods.forEach((method) =>
       this[method] = (path, { params, data } = {}) => new Promise((resolve, reject) => {
+        // Superagent is an AJAX API that gives a lot more freedom to requests.
+        // Docs here: http://visionmedia.github.io/superagent/
         const request = superagent[method](formatUrl(path));
 
         if (params) {

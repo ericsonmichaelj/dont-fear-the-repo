@@ -162,11 +162,15 @@ Then you set the `className` of your element to match one of the CSS classes in 
 
 #### Unit Tests
 
-The project uses [Mocha](https://mochajs.org/) to run your unit tests, it uses [Karma](http://karma-runner.github.io/0.13/index.html) as the test runner, it enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome etc.), which means you are able to use the [Test Utilities](http://facebook.github.io/react/docs/test-utils.html) from Facebook api like `renderIntoDocument()`.
+The project uses [Mocha](https://mochajs.org/) to run unit tests and [Karma](http://karma-runner.github.io/0.13/index.html) as the test runner. Karma enables the feature that you are able to render your tests to the browser (e.g: Firefox, Chrome, etc.), which means you are able to use the [Test Utilities](http://facebook.github.io/react/docs/test-utils.html) from Facebook api like `renderIntoDocument()`.
 
-To run the tests in the project, just simply run `npm test` if you have `Chrome` installed, it will be automatically launched as a test service for you.
+To run the tests in the project, run `npm test`. If you have `Chrome` installed, it will be automatically launched as a test service for you.
 
-To keep watching your test suites that you are working on, just set `singleRun: false` in the `karma.conf.js` file. Please be sure set it to `true` if you are running `npm test` on a continuous integration server (travis-ci, etc).
+There are additional tests for the API server, which can be run with `npm run test-node`. These tests are located in `/api/__tests__`.
+
+To keep watching your test suites that you are working on, set `singleRun: false` in the `karma.conf.js` file. Be sure set it to `true` if you are running `npm test` on a continuous integration server (travis-ci, etc).
+
+Tests should be placed in a `__tests__` folder within the same parent folder, within the `/src` folder. Filenames should end with `-test.js` to be automatically found by Webpack. Files and folders should be placed logically to be automatically found by other humans.
 
 ## Deployment on Heroku
 

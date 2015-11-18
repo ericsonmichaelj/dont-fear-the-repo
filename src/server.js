@@ -66,6 +66,7 @@ app.use((req, res) => {
 
   const store = createStore(reduxReactRouter, getRoutes, createHistory, client);
 
+  // Note: webpackIsomorphicTools was made global in bin/server
   function hydrateOnClient() {
     res.send('<!doctype html>\n' +
       ReactDOM.renderToString(<Html assets={webpackIsomorphicTools.assets()} store={store}/>));

@@ -15,6 +15,10 @@ Note : Only make pull requests to the dev branch.
 
 Please check your code using `npm run lint` before submitting your pull requests, as the CI build will fail if `eslint` fails.
 
+### Testing
+
+Whether strictly following TDD or not, testing is a good idea. Please consult the 'Unit Tests' section of the README for guidelines.
+
 ### Branches
 
 * dev : utilize branch to update, create, and test code on local host

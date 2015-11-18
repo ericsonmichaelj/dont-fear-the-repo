@@ -1,5 +1,4 @@
 export App from './App/App';
-export Chat from './Chat/Chat';
 export Home from './Home/Home';
 // TODO: make this live when our code works
 // export Resumes from './Resumes/Resumes';

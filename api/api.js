@@ -9,12 +9,13 @@ import {mapUrl} from 'utils/url.js';
 import PrettyError from 'pretty-error';
 import http from 'http';
 import SocketIo from 'socket.io';
-
+import passport from "passport";
+import PassportLinkedin from 'passport-linkedin';
+import cookieParser from 'cookie-parser'
 const pretty = new PrettyError();
 const app = express();
-
+const LinkedinStrategy =  PassportLinkedin.Strategy
 const server = new http.Server(app);
-
 const io = new SocketIo(server);
 io.path('/ws');
 
@@ -25,8 +26,37 @@ app.use(session({
   cookie: { maxAge: 60000 }
 }));
 app.use(bodyParser.json());
+app.use(passport.initialize());
+app.use(cookieParser());
+passport.use( new LinkedinStrategy({  // request fields from facebook
+  profileFields: ['summary','industry','positions','headline','picture-url','first-name','last-name','location'],
+  consumerKey: '75wbm6jxhrsauj',
+  consumerSecret: 'qz9SGDHb53Hi6tnU',
+  callbackURL: 'api/auth/linkedin'
+  //enableProof: false
+  },
+    (accessToken, refreshToken, profile, done) => {
+    setTimeout(() => {
+      return done(null, profile);
+    },0);
+  }
+));
 
+passport.serializeUser((user, done) => { // serialization is necessary for persistent sessions
+  done(null, user);
+});
+passport.deserializeUser((obj, done) => {
+  done(null, obj);
+});
+app.get('api/auth/linkedin',passport.authenticate('linkedin', { scope: ['r_basicprofile'] }), (req,res) => {
+  console.log("This is the json object",res.req.user._json)
+  console.log("This is my summary",res.req.user._json.summary);
+  console.log("These are my postions",res.req.user._json.positions);
+  console.log("This is the industry",res.req.user._json.industry);
+  console.log("This is the company(s)",res.req.user._json.company)
 
+  res.send();
+})
 app.use((req, res) => {
 
   const splittedUrlPath = req.url.split('?')[0].split('/').slice(1);

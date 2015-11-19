@@ -12,7 +12,6 @@ import Html from './helpers/Html';
 import PrettyError from 'pretty-error';
 import http from 'http';
 import SocketIo from 'socket.io';
-
 import {ReduxRouter} from 'redux-router';
 import createHistory from 'history/lib/createMemoryHistory';
 import {reduxReactRouter, match} from 'redux-router/server';
@@ -20,17 +19,22 @@ import {Provider} from 'react-redux';
 import qs from 'query-string';
 import getRoutes from './routes';
 import getStatusFromRoutes from './helpers/getStatusFromRoutes';
-
 const pretty = new PrettyError();
 const app = new Express();
 const server = new http.Server(app);
+import request from 'request'; 
+import session from 'express-session';
+import bodyParser from 'body-parser';
+import passport from "passport";
+import PassportLinkedin from 'passport-linkedin';
+import cookieParser from 'cookie-parser'
+const LinkedinStrategy =  PassportLinkedin.Strategy
 // Creates a new proxy server, which we can use with 'proxy.web()' to proxy requests to the API server.
 // The 'ws' option configures this for use with websocket requests.
 const proxy = httpProxy.createProxyServer({
   target: 'http://' + config.apiHost + ':' + config.apiPort,
   ws: true
 });
-
 // This is compression middleware, using gzip.
 app.use(compression());
 app.use(favicon(path.join(__dirname, '..', 'static', 'favicon.ico')));
@@ -132,3 +136,5 @@ if (config.port) {
 } else {
   console.error('==>     ERROR: No PORT environment variable has been specified');
 }
+
+export {app};

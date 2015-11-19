@@ -10,7 +10,8 @@ export default class Login extends Component {
   static propTypes = {
     user: PropTypes.object,
     login: PropTypes.func,
-    logout: PropTypes.func
+    logout: PropTypes.func,
+    linkedinlogin: PropTypes.func,
   }
 
   handleSubmit(event) {
@@ -18,6 +19,11 @@ export default class Login extends Component {
     const input = this.refs.username;
     this.props.login(input.value);
     input.value = '';
+  }
+
+  handleLinkedin(event) {
+    event.preventDefault();
+    this.props.linkedinlogin();
   }
 
   render() {
@@ -32,7 +38,7 @@ export default class Login extends Component {
           <form className="login-form" onSubmit={::this.handleSubmit}>
             <input type="text" ref="username" placeholder="Enter a username"/>
             <button className="btn btn-success" onClick={::this.handleSubmit}><i className="fa fa-sign-in"/>{' '}Log In
-            </button>
+            </button>`
           </form>
           <p>This will "log you in" as this user, storing the username in the session of the API server.</p>
         </div>
@@ -46,6 +52,9 @@ export default class Login extends Component {
           </div>
         </div>
         }
+        <div>
+          <button className="btn btn-success" onClick={::this.handleLinkedin}>Log into Linkedin</button>
+        </div>
       </div>
     );
   }

@@ -1,17 +1,15 @@
 const LOAD = 'redux-example/auth/LOAD';
 const LOAD_SUCCESS = 'redux-example/auth/LOAD_SUCCESS';
 const LOAD_FAIL = 'redux-example/auth/LOAD_FAIL';
-const LOGIN = 'redux-example/auth/LOGIN';
+const LOGIN = 'redux-example/auth/linkedin';
 const LOGIN_SUCCESS = 'redux-example/auth/LOGIN_SUCCESS';
 const LOGIN_FAIL = 'redux-example/auth/LOGIN_FAIL';
 const LOGOUT = 'redux-example/auth/LOGOUT';
 const LOGOUT_SUCCESS = 'redux-example/auth/LOGOUT_SUCCESS';
 const LOGOUT_FAIL = 'redux-example/auth/LOGOUT_FAIL';
-
 const initialState = {
   loaded: false
 };
-
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
     case LOAD:
@@ -24,7 +22,7 @@ export default function reducer(state = initialState, action = {}) {
         ...state,
         loading: false,
         loaded: true,
-        user: action.result
+        user: 'dkaslf'
       };
     case LOAD_FAIL:
       return {
@@ -86,8 +84,8 @@ export function load() {
 
 export function login(name) {
   return {
-    types: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
-    promise: (client) => client.post('/login', {
+    types: [LOGIN],
+    promise: (client) => client.get('/auth/linkedin', {
       data: {
         name: name
       }
@@ -101,3 +99,4 @@ export function logout() {
     promise: (client) => client.get('/logout')
   };
 }
+
